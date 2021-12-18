@@ -1,12 +1,31 @@
-.navbar-lewagon {
+.navbar {
+  background-color: $dark-grey;
+  display: flex;
+  height: $navbar-height;
   justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100vw;
+  a {
+    color: $white;
+    font-family: $headers-font;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: $light-red;
+      text-decoration: none;
+    }
+  }
+  .logo {
+    border-radius: 50%;
+    background-color: $white;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 1.5rem;
+      fill: $red;
+    }
+  }
 }

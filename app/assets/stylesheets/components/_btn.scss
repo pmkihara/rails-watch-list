@@ -1,0 +1,19 @@
+.btn-capsule {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+.btn-frosted {
+  background-color: $white-frosted;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  border: 1px solid $white;
+  color: $white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: rgba($white, $alpha: 0.2);
+    color: $white;
+    text-decoration: none;
+  }
+}

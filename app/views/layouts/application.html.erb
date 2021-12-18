@@ -13,6 +13,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+    <div class="page-content">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' unless current_page?(root_url) %>
   </body>
 </html>

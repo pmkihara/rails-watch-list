@@ -1,0 +1,13 @@
+// Screen breakpoints
+$extra-small: 36em; // 576px
+$small:       48em; // 768px
+$medium:      62em; // 992px
+$large:       75em; // 1200px
+$extra-large: 90em; // 1440px
+
+$navbar-height: 4rem;
+$footer-height: 4rem;
+
+.page-content {
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+}
