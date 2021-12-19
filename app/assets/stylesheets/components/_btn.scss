@@ -4,8 +4,8 @@
 }
 .btn-frosted {
   background-color: $white-frosted;
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: $frosted-blur;
+  -webkit-backdrop-filter: $frosted-blur;
   border: 1px solid $white;
   color: $white;
   font-weight: 700;
@@ -14,6 +14,5 @@
   &:hover {
     background-color: rgba($white, $alpha: 0.2);
     color: $white;
-    text-decoration: none;
   }
 }
