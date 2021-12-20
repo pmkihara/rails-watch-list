@@ -9,6 +9,10 @@ class ListsController < ApplicationController
   def show
   end
 
+  def new
+    @list = List.new
+  end
+
   def create
     @list = List.new(list_params)
     if @list.save

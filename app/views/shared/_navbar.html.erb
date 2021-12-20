@@ -1,10 +1,13 @@
 <div class="navbar">
   <div class="links">
-    <%= link_to root_path do %>
-      <div class="logo">
+    <%= link_to root_path, class: 'links' do %>
+      <div class="logo mr-3">
         <%= inline_svg 'popcorn.svg' %>
       </div>
     <% end %>
-    <%= link_to 'Lists', lists_path, class: 'ml-3' %>
+  </div>
+  <div class="links">
+    <%= link_to 'All Lists', lists_path, class: 'ml-3' %>
+    <%= link_to 'New List', new_list_path, class: 'ml-3' %>
   </div>
 </div>
