@@ -1,6 +1,14 @@
 .btn-capsule {
   padding: 1rem 2rem;
   border-radius: 3rem;
+  display: inline;
+  cursor: pointer;
+}
+.btn-capsule-sm {
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  display: inline;
+  cursor: pointer;
 }
 .btn-frosted {
   background-color: $white-frosted;
@@ -13,6 +21,18 @@
   transition: background-color 0.3s;
   &:hover {
     background-color: rgba($white, $alpha: 0.2);
+    color: $white;
+  }
+}
+.btn-red {
+  background-color: $dark-red;
+  color: $white;
+  color: $white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $light-red;
     color: $white;
   }
 }

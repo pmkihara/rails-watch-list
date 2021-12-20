@@ -6,45 +6,50 @@
   padding: 2rem 1rem;
 }
 .card-list {
-  width: 21rem;
   align-items: center;
+  background-size: cover;
   border-radius: 4px;
   box-shadow: 2px 2px 8px 1px rgba($black, $alpha: 0.3);
   color: $black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-height: 7rem;
   max-height: 7rem;
   overflow: hidden;
   padding: 1rem 0;
   transition: transform 0.3s;
-  h5 {
-    font-family: $body-font;
-    font-weight: 900;
-    margin: 0;
+  width: 21rem;
+  .card-list-info {
     background-color: $white-frosted;
     backdrop-filter: $frosted-blur;
     -webkit-backdrop-filter: $frosted-blur;
-    width: 100%;
-    text-align: center;
     padding: 0.3rem 1rem;
+    text-align: center;
     transition: background-color 0.3s;
+    width: 100%;
+    p, h5 {
+      font-family: $body-font;
+      margin: 0;
+    }
+    h5 {
+      font-weight: 900;
+      text-shadow: 0 0 7px white
+    }
+    p {
+      display: none;
+    }
   }
   &:hover {
     transform: translate(0, -4px);
-    h5 {
+    .card-list-info {
       background-color: rgba($white, $alpha: 0.5);
+      p {
+        display: block;
+      }
+      h5 {
+        text-shadow: none
+      }
     }
-  }
-}
-@media (max-width: $medium) {
-  .cards-grid-3 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: $extra-small) {
-  .cards-grid-3 {
-    grid-template-columns: 1fr;
   }
 }

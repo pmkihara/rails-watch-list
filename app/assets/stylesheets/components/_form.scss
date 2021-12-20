@@ -1,0 +1,27 @@
+.form-list {
+  .form-control, .form-control.is-invalid {
+    border-color: $white;
+    text-align: center;
+    background: $white-frosted;
+    color: $white;
+    border-radius: 4rem;
+    &:focus {
+      border-color: #ffb1b1;
+      box-shadow: 0 0 0 0.2rem rgba($light-red, $alpha: 0.3)
+    }
+
+  }
+  .invalid-feedback {
+    color: $white;
+  }
+  ::placeholder {
+    color: $white;
+    opacity: 0.6;
+  }
+  ::-ms-input-placeholder {
+    color: $white;
+  }
+  ::-ms-input-placeholder {
+    color: $white;
+  }
+}
