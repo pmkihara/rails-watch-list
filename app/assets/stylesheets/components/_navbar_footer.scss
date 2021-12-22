@@ -3,15 +3,13 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  max-width: 100%;
   a {
     color: $white;
     font-family: $headers-font;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    &:hover {
-      color: $light-red;
-    }
   }
   .logo {
     border-radius: 50%;
@@ -36,9 +34,10 @@
   backdrop-filter: $frosted-blur;
   -webkit-backdrop-filter: $frosted-blur;
   height: #{$navbar-height};
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   position: absolute;
   z-index: 1;
+  transition: ease-in-out;
 }
 .footer {
   background-color: $dark-grey;
@@ -51,5 +50,8 @@
   p {
   margin: 0;
   color: white;
+  }
+  a:hover {
+    color: $light-red;
   }
 }

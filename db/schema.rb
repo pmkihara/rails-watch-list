@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_12_18_021723) do
   create_table "bookmarks", force: :cascade do |t|
     t.string "comment"
     t.integer "personal_rating"
-    t.boolean "watched"
+    t.boolean "watched", default: false
     t.bigint "movie_id"
     t.bigint "list_id"
     t.datetime "created_at", precision: 6, null: false

@@ -1,12 +1,11 @@
 .banner {
   align-items: center;
-  background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 100vw;
+  width: 100%;
   .banner-container {
     color: $white;
     max-width: 80%;

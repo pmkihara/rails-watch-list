@@ -1,4 +1,4 @@
-<div class='banner banner-section' style='background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url('<%= image_url 'lists.jpg'%>')'>
+<div class='banner banner-section' style='background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url("<%= image_url 'lists.jpg'%>")'>
   <div class='banner-content'>
     <div class='banner-container'>
       <h1 class='mb-4'>Watch Lists</h1>
@@ -14,7 +14,16 @@
     <% if @lists.empty? %>
       <h5>No lists have been created yet! 😱</h5>
     <% else %>
-      <%= render @lists %>
+      <% @lists.each do |list| %>
+        <%= link_to list do %>
+          <div style='background-image: url("<%= image_url 'movies.jpg'%>")', class='card-list'>
+            <div class='card-list-info'>
+              <h5><%= list.name %></h5>
+              <p><%= list.movies.empty? ? 0 : list.movies.length  %> movies</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
