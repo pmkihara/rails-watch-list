@@ -1,0 +1,12 @@
+<% movie = bookmark.movie %>
+<div class='movie'>
+  <% if movie.poster_url %>
+    <img src="<%= movie.poster_url %>" alt="<%= movie.title%> poster">
+  <% end %>
+  <div class='movie-info'>
+    <h3><%= movie.title %></h3>
+    <p><%= movie.overview %></p>
+    <p><%= movie.rating %></p>
+  </div>
+  <%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie from your list?'} %>
+</div>

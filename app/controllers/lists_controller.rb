@@ -19,7 +19,7 @@ class ListsController < ApplicationController
       redirect_to @list
     else
       @lists = List.all
-      render :index
+      render new_list_path
     end
   end
 

@@ -15,8 +15,8 @@
     <h5 class='text-center p-5'>You have not added any movie yet!</h5>
   <% else %>
     <div class='movies-list'>
-      <% @list.movies.each do |movie| %>
-        <%= render 'movie', movie: movie %>
+      <% @list.bookmarks.each do |bookmark| %>
+        <%= render 'bookmark', bookmark: bookmark %>
       <% end %>
     </div>
   <% end %>
