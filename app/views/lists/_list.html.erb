@@ -1,0 +1,8 @@
+<%= link_to list do %>
+  <div style='background-image: url("<%= image_url 'movies.jpg'%>")', class='card-list'>
+    <div class='card-list-info'>
+      <h5><%= list.name %></h5>
+      <p><%= list.movies.empty? ? 0 : list.movies.length  %> movies</p>
+    </div>
+  </div>
+<% end %>

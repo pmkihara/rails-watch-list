@@ -9,6 +9,7 @@
   <h2>Add movies to <%= @list.name %></h2>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.association :movie, label: false, collection: Movie.all.order(:title) %>
+    <%= f.input :comment %>
     <%= f.submit %>
   <% end %>
 </div>

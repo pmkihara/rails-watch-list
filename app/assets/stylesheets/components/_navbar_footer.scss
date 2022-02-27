@@ -11,6 +11,9 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+  a:hover {
+    color: $light-red;
+  }
   .logo {
     border-radius: 50%;
     background-color: $white;
@@ -40,18 +43,16 @@
   transition: ease-in-out;
 }
 .footer {
-  background-color: $dark-grey;
+  background-color: $black;
   height: #{$footer-height};
   padding: 0.5rem 3rem;
   position: relative;
   i {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   p {
   margin: 0;
   color: white;
-  }
-  a:hover {
-    color: $light-red;
+  font-size: 0.8rem;
   }
 }

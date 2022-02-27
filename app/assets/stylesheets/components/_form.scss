@@ -1,10 +1,11 @@
 .form-list {
   .form-control, .form-control.is-invalid {
-    border-color: $white;
-    text-align: center;
     background: $white-frosted;
-    color: $white;
+    border-color: $white;
     border-radius: 4rem;
+    color: $white;
+    padding: 0.25rem;
+    text-align: center;
     &:focus {
       border-color: #ffb1b1;
       box-shadow: 0 0 0 0.2rem rgba($light-red, $alpha: 0.3)

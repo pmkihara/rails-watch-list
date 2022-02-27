@@ -18,5 +18,6 @@
       <%= yield %>
     </div>
     <%= render 'shared/footer' unless current_page?(root_url) %>
+    <%= turbo_frame_tag 'modal' %>
   </body>
 </html>
