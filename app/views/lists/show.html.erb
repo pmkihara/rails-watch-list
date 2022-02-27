@@ -1,25 +1,27 @@
-<div class='banner banner-section' style='background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url("<%= image_url 'movies.jpg'%>")'>
-  <div class='banner-content'>
-    <div class='banner-container'>
+<div class="banner banner-section" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url('<%= image_url 'movies.jpg'%>')">
+  <div class="banner-content">
+    <div class="banner-container">
       <h1><%= @list.name %></h1>
-      <%= link_to 'Edit', edit_list_path(@list), data: { turbo: true, turbo_frame: 'modal' } %> |
-      <%= link_to 'Delete', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this watchlist?' } %>
+      <%= link_to edit_list_path(@list), class: "mr-3", data: { turbo: true, turbo_frame: "modal" } do %>
+        <div class="btn-capsule-sm btn-frosted">
+          <i class="fas fa-pen"></i> Edit
+        </div>
+      <% end %>
+      <%= link_to list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this watchlist?" } do %>
+        <div class="btn-capsule-sm btn-frosted">
+          <i class="far fa-trash-alt"></i> Delete
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-<div class='container p-5 my-5'>
-  <div class='d-flex w-100 justify-content-end'>
-    <%= link_to new_list_bookmark_path(list_id: @list), class: 'btn-capsule-sm btn-red' do %>
-      <i class='fas fa-plus mr-2'></i>Add a movie
-      <% end %>
-  </div>
-  <% if @list.movies.empty? %>
-    <h5 class='text-center p-5'>You have not added any movie yet!</h5>
-  <% else %>
-    <div class='movies-list'>
-      <% @list.bookmarks.each do |bookmark| %>
-        <%= render 'bookmark', bookmark: bookmark %>
-      <% end %>
-    </div>
+<div class="container p-5 text-center">
+  <%= link_to new_list_bookmark_path(list_id: @list), class: "btn-capsule-sm btn-red" do %>
+    <i class="fas fa-plus mr-2"></i>Add a movie
   <% end %>
+  <div class="cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <%= render "bookmark", bookmark: bookmark %>
+    <% end %>
+  </div>
 </div>

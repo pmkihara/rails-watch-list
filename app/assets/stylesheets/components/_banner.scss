@@ -1,27 +1,29 @@
 .banner {
   align-items: center;
   background-size: cover;
+  color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   width: 100%;
+  p, h1 {
+    text-shadow: 0 0 6px #ffffff;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  p {
+    opacity: 0.8;
+  }
   .banner-container {
-    color: $white;
     max-width: 80%;
     text-align: center;
-    h1 {
-      text-transform: uppercase;
-    }
   }
 }
 
 .banner-full {
   height: 100vh;
-  p, h1 {
-    opacity: 0.8;
-    text-shadow: 0 0 6px $white;
-  }
   p {
     font-size: 1.8rem;
   }

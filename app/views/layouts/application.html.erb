@@ -13,11 +13,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <div class='page-content'>
+    <%= render "shared/navbar" %>
+    <div class="page-content">
       <%= yield %>
     </div>
-    <%= render 'shared/footer' unless current_page?(root_url) %>
-    <%= turbo_frame_tag 'modal' %>
+    <%= render "shared/footer" unless current_page?(root_url) %>
+    <%= turbo_frame_tag "modal" %>
   </body>
 </html>

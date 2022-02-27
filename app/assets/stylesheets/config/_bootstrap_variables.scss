@@ -24,5 +24,9 @@ $border-radius-sm: 2px;
 
 // Override other variables below!
 a {
+  color: $light-red !important;
   text-decoration: none !important;
+  &:hover {
+    color: $red !important;
+  }
 }

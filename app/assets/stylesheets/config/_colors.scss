@@ -9,7 +9,7 @@ $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 
-// $watchlist-black: #000000;
+// This project's colors:
 $black:       #0B090A;
 $dark-grey:   #1F1F1E;
 $medium-grey: #524E4E;
@@ -20,4 +20,6 @@ $dark-red:    #A30000;
 $white-frosted: rgba(#FFFFFF, $alpha: 0.1);
 $modal-bg: rgba(#000000, $alpha: 0.75);
 
+// Blur for frosted effect
 $frosted-blur: blur(4px);
+
