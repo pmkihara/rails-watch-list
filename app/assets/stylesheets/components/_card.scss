@@ -14,7 +14,7 @@
   box-shadow: 2px 2px 8px 1px rgba($black, $alpha: 0.3);
   transition: transform 0.3s;
   &:hover {
-    box-shadow: 0 0 10px rgba($white, $alpha: 0.3);
+    box-shadow: 0 0 10px rgba($light-gold, $alpha: 0.3);
     transform: translate(0, -4px);
   }
 }
@@ -67,17 +67,18 @@
 // Movie card
 .card-movie {
   height: 18rem;
-  width: 12rem;
   position: relative;
+  width: 12rem;
   .card-rating {
-    background-color: $dark-red;
-    color: $white;
-    position: absolute;
+    background-color: $light-gold;
     bottom: 1rem;
-    right: 0;
+    color: $black;
+    font-size: 0.9rem;
+    font-weight: 700;
     margin: 0;
     padding: 0 0.5rem;
-    font-size: 0.9rem;
+    position: absolute;
+    right: 0;
   }
 }
 

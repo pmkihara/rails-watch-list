@@ -25,14 +25,14 @@
   }
 }
 .btn-red {
-  background-color: $dark-red;
+  background-color: $gold;
   border: 0;
   color: $white;
   font-weight: 700;
   letter-spacing: 1px;
   transition: background-color 0.3s;
   &:hover {
-    background-color: $light-red;
+    background-color: $dark-gold;
     color: $white;
   }
 }
