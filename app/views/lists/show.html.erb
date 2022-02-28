@@ -1,7 +1,7 @@
 <div class="banner banner-section" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url('<%= image_url 'movies.jpg'%>')">
   <div class="banner-content">
     <div class="banner-container p-2 p-md-3">
-      <h1><%= @list.name %></h1>
+      <h1 id="listname"><%= @list.name %></h1>
       <%= link_to edit_list_path(@list), class: "mx-3", data: { turbo: true, turbo_frame: "modal" } do %>
         <div class="btn-capsule-sm btn-frosted">
           <i class="fas fa-pen mr-2"></i> Edit
@@ -16,10 +16,10 @@
   </div>
 </div>
 <div class="container p-5 text-center">
-  <%= link_to new_list_bookmark_path(list_id: @list), class: "btn-capsule btn-gold" do %>
+  <%= link_to new_list_bookmark_path(list_id: @list), class: "btn-capsule btn-gold", data: { turbo: true, turbo_frame: 'modal' } do %>
     <i class="fas fa-plus mr-2"></i>Add a movie
   <% end %>
-  <div class="cards">
+  <div class="cards" id="movie-cards">
     <% @list.bookmarks.each do |bookmark| %>
       <%= render "bookmark", bookmark: bookmark %>
     <% end %>

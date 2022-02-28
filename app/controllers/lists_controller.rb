@@ -6,8 +6,7 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @list = List.new
@@ -17,7 +16,10 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to @list
+      respond_to do |format|
+        format.html { redirect_to @list }
+        format.turbo_stream { render turbo_stream: turbo_stream.append('watchlists', partial: 'lists/list', locals: { list: @list }) }
+      end
     else
       render :new, status: :unprocessable_entity # assures the modal doesn't close after submit
     end
@@ -27,7 +29,12 @@ class ListsController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to @list
+      respond_to do |format|
+        format.html { redirect_to @list }
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.update('listname', @list.name)
+        end
+      end
     else
       render :new, status: :unprocessable_entity # assures the modal doesn't close after submit
     end

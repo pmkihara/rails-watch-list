@@ -1,8 +1,6 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ['documentRow', 'link']
-
   connect() {
     if (this.element.classList.contains('modal-close')) { this.element.classList.remove('modal-close') }
     this.element.classList.add('modal-open')

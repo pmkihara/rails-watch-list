@@ -1,16 +1,27 @@
 <% movie = @bookmark.movie %>
+
 <%= render "shared/modal", modal_width: "modal-lg-width card-details" do %>
   <div class="row">
-    <div class="col-12 col-md-4">
+    <%# Poster %>
+    <div class="col-12 col-sm-4">
       <img src="<%= movie.poster_url %>" alt="<%= movie.title %> poster">
     </div>
-    <div class="col-12 col-md-8">
+    <%# Info %>
+    <div class="col-12 col-sm-8">
       <h1 class="m-0"><%= movie.title %></h1>
       <small>Rating: <%= movie.rating %> | <%= link_to "Remove from list", bookmark_path(@bookmark), method: :delete, class: "link-underline link-gold", data: { confirm: "Are you sure you want to remove this movie from your list?" } %></small>
       <h4 class="mt-4 mb-0">Overview:</h4>
       <p><%= movie.overview %></p>
-      <h4 class="mt-4 mb-0">Comment:</h4>
-      <p><%= @bookmark&.comment %></p>
+      <div class="d-flex align-items-center mt-4">
+        <h4 class="mb-0">Comment:</h4>
+        <%= link_to edit_bookmark_path(@bookmark), data: { turbo: true, turbo_frame: 'comment' } do %>
+          <i class="fas fa-edit ml-3"></i>
+        <% end %>
+      </div>
+      <%# Turbo frame with comment %>
+      <%= turbo_frame_tag 'comment' do %>
+        <p><%= @bookmark&.comment %></p>
+      <% end %>
     </div>
   </div>
 <% end %>

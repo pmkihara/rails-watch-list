@@ -1,16 +1,22 @@
 .form-list {
   .form-control, .form-control.is-invalid {
-    background: $white-frosted;
-    border-color: $white;
-    border-radius: 4rem;
+    background-color: $medium-grey;
+    border: 1px solid $white;
+    border-radius: 2rem;
     color: $white;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
     text-align: center;
     &:focus {
-      border-color: #ffb1b1;
-      box-shadow: 0 0 0 0.2rem rgba($light-red, $alpha: 0.3)
+      border-color: $dark-gold;
+      box-shadow: 0 0 0 0.2rem rgba($dark-gold, $alpha: 0.3)
     }
-
+  }
+  option {
+    background-color: $medium-grey;
+    color: white;
+  }
+  option, textarea.form-control {
+    text-align: left !important;
   }
   .invalid-feedback {
     color: $white;
@@ -24,5 +30,17 @@
   }
   ::-ms-input-placeholder {
     color: $white;
+  }
+}
+// For forms with edit in place
+.inplace-form {
+  .form-control, .form-control.is-invalid, .form-control.is-valid {
+    background: none;
+    color: white;
+    border: 1px solid $white;
+    &:focus {
+      border-color: $dark-gold;
+      box-shadow: 0 0 0 0.2rem rgba($dark-gold, $alpha: 0.3)
+    }
   }
 }
