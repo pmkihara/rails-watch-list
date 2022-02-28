@@ -1,29 +1,17 @@
-<div class='banner banner-section' style='background-image: linear-gradient(0deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.7) 100%), url("<%= image_url 'lists.jpg'%>")'>
-  <div class='banner-content'>
-    <div class='banner-container'>
-      <h1 class='mb-4'>Watch Lists</h1>
-      <p class='btn-capsule-sm btn-red d-none' id='inplace-form-btn'><i class='fas fa-plus mr-2'></i>New List</p>
-      <%= simple_form_for @list do |f| %>
-        <%= f.input :name, label: false, placeholder: 'Enter the name of your new list',  wrapper_html: {class: 'form-list'} %>
-      <% end %>
+<div class="banner banner-section" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.9) 100%), url('<%= image_url 'lists.jpg'%>')">
+  <div class="banner-content">
+    <div class="banner-container">
+      <h1>Watch Lists</h1>
     </div>
   </div>
 </div>
-<div class='container'>
-  <div class='cards'>
-    <% if @lists.empty? %>
-      <h5>No lists have been created yet! 😱</h5>
-    <% else %>
-      <% @lists.each do |list| %>
-        <%= link_to list do %>
-          <div style='background-image: url("<%= image_url 'movies.jpg'%>")', class='card-list'>
-            <div class='card-list-info'>
-              <h5><%= list.name %></h5>
-              <p><%= list.movies.empty? ? 0 : list.movies.length  %> movies</p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
+<div class="container p-5 text-center">
+  <%= link_to new_list_path, class: "btn-capsule btn-gold", data: { turbo: true, turbo_frame: "modal" } do %>
+    <i class="fas fa-plus mr-2"></i>New List
+  <% end %>
+  <div class="cards mt-3" id="watchlists">
+    <% @lists.each do |list| %>
+      <%= render "list", list: list %>
     <% end %>
   </div>
 </div>

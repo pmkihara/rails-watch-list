@@ -2,7 +2,6 @@ require 'open-uri'
 require 'json'
 require 'faker'
 
-
 # DELETES EXISTING RECORDS
 print 'Deleting existing Bookmarks...'
 Bookmark.destroy_all
@@ -42,8 +41,6 @@ Movie.create!(title: 'Inception', overview: 'A thief who steals corporate secret
 Movie.create!(title: 'Star Wars: Episode V - The Empire Strikes Back', overview: 'After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.', poster_url: 'Star Wars: Episode V - The Empire Strikes Back', rating: 8.7)
 
 puts '...created!'
-
-# https://coolors.co/0b090a-1f1f1e-7a7160-ffffff-e5383b-ba181b-a30000
 
 print 'Creating 1 list...'
 List.create!(name: 'To watch')

@@ -1,12 +1,6 @@
 <% movie = bookmark.movie %>
-<div class='movie'>
-  <% if movie.poster_url %>
-    <img src="<%= movie.poster_url %>" alt="<%= movie.title%> poster">
-  <% end %>
-  <div class='movie-info'>
-    <h3><%= movie.title %></h3>
-    <p><%= movie.overview %></p>
-    <p><%= movie.rating %></p>
+<%= link_to details_bookmark_path(bookmark), data: { turbo: true, turbo_frame: "modal" }  do %>
+  <div class="card-movie" style="background-image: url(<%= movie.poster_url%>)">
+    <p class="card-rating"><i class="far fa-star"></i> <%= movie.rating %></p>
   </div>
-  <%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie from your list?'} %>
-</div>
+<% end %>

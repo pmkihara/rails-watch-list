@@ -1,14 +1,17 @@
 .btn-capsule {
-  padding: 1rem 2rem;
   border-radius: 3rem;
-  display: inline;
   cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.5rem;
 }
 .btn-capsule-sm {
-  padding: 0.6rem 1.2rem;
   border-radius: 2rem;
-  display: inline;
   cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.3rem 1rem;
 }
 .btn-frosted {
   background-color: $white-frosted;
@@ -16,23 +19,30 @@
   -webkit-backdrop-filter: $frosted-blur;
   border: 1px solid $white;
   color: $white;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: background-color 0.3s;
+  transition: $animate;
   &:hover {
     background-color: rgba($white, $alpha: 0.2);
     color: $white;
   }
 }
-.btn-red {
-  background-color: $dark-red;
+.btn-gold {
+  background-color: $gold;
+  border: 0;
   color: $white;
-  color: $white;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: background-color 0.3s;
+  transition: $animate;
   &:hover {
-    background-color: $light-red;
+    background-color: $dark-gold;
     color: $white;
+  }
+}
+.btn-outline-gold {
+  background: none;
+  border: 2px solid $gold;
+  color: $gold;
+  transition: $animate;
+  &:hover {
+    border-color: $light-gold;
+    color: $light-gold;
+    box-shadow: 0 0 5px $dark-gold, 0 0 5px $dark-gold inset;
   }
 }

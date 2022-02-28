@@ -1,3 +1,4 @@
+// Container for the cards
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -5,11 +6,22 @@
   justify-content: center;
   padding: 2rem 1rem;
 }
-.card-list {
-  align-items: center;
+
+// Common styles for lists and movies cards
+.card-list, .card-movie {
   background-size: cover;
   border-radius: 4px;
   box-shadow: 2px 2px 8px 1px rgba($black, $alpha: 0.3);
+  transition: $animate;
+  &:hover {
+    box-shadow: 0 0 10px rgba($light-gold, $alpha: 0.3);
+    transform: translate(0, -4px);
+  }
+}
+
+// List card
+.card-list {
+  align-items: center;
   color: $black;
   display: flex;
   flex-direction: column;
@@ -18,15 +30,14 @@
   max-height: 7rem;
   overflow: hidden;
   padding: 1rem 0;
-  transition: transform 0.3s;
-  width: 21rem;
+  width: 20rem;
   .card-list-info {
     background-color: $white-frosted;
     backdrop-filter: $frosted-blur;
     -webkit-backdrop-filter: $frosted-blur;
     padding: 0.3rem 1rem;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: $animate;
     width: 100%;
     p, h5 {
       font-family: $body-font;
@@ -41,7 +52,6 @@
     }
   }
   &:hover {
-    transform: translate(0, -4px);
     .card-list-info {
       background-color: rgba($white, $alpha: 0.5);
       p {
@@ -51,5 +61,33 @@
         text-shadow: none
       }
     }
+  }
+}
+
+// Movie card
+.card-movie {
+  height: 18rem;
+  position: relative;
+  width: 12rem;
+  .card-rating {
+    background-color: $light-gold;
+    bottom: 1rem;
+    color: $black;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 0.5rem;
+    position: absolute;
+    right: 0;
+  }
+}
+
+// Movie details card
+.modal-card.card-details {
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: $gold;
   }
 }
