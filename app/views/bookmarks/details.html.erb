@@ -6,7 +6,7 @@
     </div>
     <div class="col-12 col-md-8">
       <h1 class="m-0"><%= movie.title %></h1>
-      <small>Rating: <%= movie.rating %> | <%= link_to "Remove from list", bookmark_path(@bookmark), method: :delete, data: { confirm: "Are you sure you want to remove this movie from your list?" } %></small>
+      <small>Rating: <%= movie.rating %> | <%= link_to "Remove from list", bookmark_path(@bookmark), method: :delete, class: "link-underline link-gold", data: { confirm: "Are you sure you want to remove this movie from your list?" } %></small>
       <h4 class="mt-4 mb-0">Overview:</h4>
       <p><%= movie.overview %></p>
       <h4 class="mt-4 mb-0">Comment:</h4>

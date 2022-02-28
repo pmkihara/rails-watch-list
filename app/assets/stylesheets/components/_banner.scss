@@ -33,18 +33,17 @@
 }
 
 .banner-section {
-  height: 50vh;
+  min-height: 50vh;
   .banner-content {
     align-items: center;
     bottom: 0;
     display: flex;
-    height: calc(50vh - #{$navbar-height});
+    min-height: calc(50vh - #{$navbar-height});
     justify-content: center;
-    position: absolute;
     width: 100%;
   }
   .banner-container {
-    padding: 2rem 5rem;
+    padding-top: $navbar-height !important;
     position: relative;
     min-width: 50%;
     p {
