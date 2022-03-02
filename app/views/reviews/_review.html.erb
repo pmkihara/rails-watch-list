@@ -1,0 +1,5 @@
+<div class="card-review">
+  <h5><%= review.rating %></h5>
+  <span><%= review.author %></span> - <small><%= (Time.now - review.created_at) / 60 %> minutes ago</small>
+  <p><%= review.comment %></p>
+</div>

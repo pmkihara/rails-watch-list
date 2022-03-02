@@ -13,7 +13,7 @@ class BookmarksController < ApplicationController
       respond_to do |format|
         format.html { redirect_to list_path(@list) }
         format.turbo_stream do
-          render turbo_stream: turbo_stream.append('movie-cards', partial: 'lists/bookmark', locals: { bookmark: @bookmark })
+          render turbo_stream: turbo_stream.append('movie-cards', partial: 'bookmarks/bookmark', locals: { bookmark: @bookmark })
         end
       end
     else

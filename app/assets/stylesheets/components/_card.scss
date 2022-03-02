@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  padding: 2rem 1rem;
 }
 
 // Common styles for lists and movies cards
@@ -66,9 +65,9 @@
 
 // Movie card
 .card-movie {
-  height: 18rem;
+  height: 14rem;
   position: relative;
-  width: 12rem;
+  width: 10rem;
   .card-rating {
     background-color: $light-gold;
     bottom: 1rem;

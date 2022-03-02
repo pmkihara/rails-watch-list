@@ -15,13 +15,13 @@
     </div>
   </div>
 </div>
-<div class="container p-5 text-center">
-  <%= link_to new_list_bookmark_path(list_id: @list), class: "btn-capsule btn-gold", data: { turbo: true, turbo_frame: 'modal' } do %>
+<div class="container p-1 p-sm-3 text-center">
+  <%= link_to new_list_bookmark_path(list_id: @list), class: "btn-capsule btn-gold my-3", data: { turbo: true, turbo_frame: 'modal' } do %>
     <i class="fas fa-plus mr-2"></i>Add a movie
   <% end %>
-  <div class="cards" id="movie-cards">
-    <% @list.bookmarks.each do |bookmark| %>
-      <%= render "bookmark", bookmark: bookmark %>
+  <div class="cards p-1 p-sm-3" id="movie-cards">
+    <% @list.bookmarks&.each do |bookmark| %>
+      <%= render "bookmarks/bookmark", bookmark: bookmark %>
     <% end %>
   </div>
 </div>
