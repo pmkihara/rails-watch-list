@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'json'
-require 'faker'
 
 # DELETES EXISTING RECORDS
 print 'Deleting existing Bookmarks...'
