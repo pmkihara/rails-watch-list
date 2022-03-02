@@ -1,6 +1,10 @@
 {
   "name": "rails_watch_list",
   "private": true,
+  "engines": {
+    "node": "14.15.5",
+    "yarn": "1.22.17"
+  },
   "dependencies": {
     "@hotwired/turbo-rails": "^7.1.0",
     "@rails/actioncable": "^6.0.0",
