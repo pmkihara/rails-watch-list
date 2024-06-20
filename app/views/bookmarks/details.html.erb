@@ -15,7 +15,7 @@
       <div class="d-flex align-items-center mt-4">
         <h4 class="mb-0">Comment:</h4>
         <%= link_to edit_bookmark_path(@bookmark), data: { turbo: true, turbo_frame: 'comment' } do %>
-          <i class="fas fa-edit ml-3"></i>
+          <i class="fas fa-edit ms-3"></i>
         <% end %>
       </div>
       <%= turbo_frame_tag 'comment' do %>
